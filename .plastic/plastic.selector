@@ -1,0 +1,4 @@
+repository "MetaWalnutGame@Graduation_Recycle@cloud"
+  path "/"
+    br "/main"
+    co "/main"
