@@ -16414,6 +16414,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.016069, y: 0.008293382, z: 0.008579171}
   m_Center: {x: 0, y: -2.2614671e-18, z: 0.00031827317}
+--- !u!114 &1353159397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353159392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab13260d8f561ff48a3c4d06498fcda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlreadySummon: 0
 --- !u!1001 &1365627420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18048,6 +18061,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fd296ddbf487c9418a2397e436ebf13, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1353159393}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fd296ddbf487c9418a2397e436ebf13, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353159397}
   m_SourcePrefab: {fileID: 100100000, guid: 9fd296ddbf487c9418a2397e436ebf13, type: 3}
 --- !u!1001 &1562217550
 PrefabInstance:
@@ -28516,8 +28532,6 @@ GameObject:
   - component: {fileID: 1955165240519069492}
   - component: {fileID: 3210503550544871569}
   - component: {fileID: 822197966668002395}
-  - component: {fileID: 8962121163004127180}
-  - component: {fileID: 9219356503947432703}
   m_Layer: 0
   m_Name: Walnut
   m_TagString: Specialty
@@ -39081,23 +39095,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268484157736013624}
   m_Mesh: {fileID: -372146319369551962, guid: 52d8476a33376b045bd2dbe8dd64a473, type: 3}
---- !u!114 &8962121163004127180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182745491170186638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9058c9d057af9bc469ac34776c22ee80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  specialtyData: {fileID: 11400000, guid: e54809a9e2f0bf4418915af27eae6357, type: 2}
-  hasInteracted: 0
-  isAquarium: 0
-  isWall: 0
-  isNextSummoned: 0
 --- !u!23 &8973586009186652364
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39730,40 +39727,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7056677870161351865}
   m_Mesh: {fileID: -3593600602754362305, guid: 52d8476a33376b045bd2dbe8dd64a473, type: 3}
---- !u!114 &9219356503947432703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182745491170186638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pointable: {fileID: 0}
-  _whenRelease:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenHover:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenUnhover:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenSelect:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenUnselect:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenMove:
-    m_PersistentCalls:
-      m_Calls: []
-  _whenCancel:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &9222618581320858217
 GameObject:
   m_ObjectHideFlags: 0

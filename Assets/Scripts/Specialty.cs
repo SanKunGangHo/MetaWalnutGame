@@ -7,17 +7,12 @@ public class Specialty : MonoBehaviour
     [SerializeField]private bool hasInteracted = false;
     [SerializeField]private bool isAquarium = false;
     [SerializeField]private bool isWall = false;
+    public bool isTriggered;
 
     public bool isNextSummoned = true;
 
     private void Update(){
-        if(transform.position.y<-10){//떨어졌을 때
-            GameManagement.Instance.FloorFalledSpawn(gameObject.GetComponent<Specialty>().specialtyData.SpecialtyName); //같은 물체로 소환
-            if(isAquarium){//수조에 들어갔던 애면
-                GameManagement.Instance.GameEnd();//게임 종료
-            }
-            Destroy(gameObject);//자신 삭제
-        }
+
     }
 
     private void OnCollisionEnter(Collision other) { //충돌
@@ -41,14 +36,15 @@ public class Specialty : MonoBehaviour
             if(isAquarium){
                 GameManagement.Instance.GameEnd(); //수조에 들어갔던 특산물은 바닥에 닿으면 게임이 끝남
             }else{
-                GameManagement.Instance.FloorFalledSpawn(gameObject.GetComponent<Specialty>().specialtyData.SpecialtyName); //가져가다 떨어트린 특산물은 바닥에 닿으면 같은 특산물을 소환
+                GameManagement.Instance.FloorFalledSpawn(specialtyData.SpecialtyName); //가져가다 떨어트린 특산물은 바닥에 닿으면 같은 특산물을 소환
                 Destroy(gameObject);//자기 자신을 삭제
             }
         }
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.CompareTag("Aquarium")){//수조에 들어갔을 때
+        if(other.gameObject.CompareTag("Aquarium") && !isAquarium){//수조에 들어갔을 때
+            isTriggered = true;
             Invoke("Aquarium", 1f);
             gameObject.GetComponent<HandGrabInteractable>().enabled =false;
             gameObject.GetComponent<Rigidbody>().isKinematic = false;

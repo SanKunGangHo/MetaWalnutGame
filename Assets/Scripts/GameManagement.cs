@@ -20,6 +20,8 @@ public class GameManagement : MonoBehaviour
 
     public float newSpawnTime;
 
+    public GameObject alreadySummoned;
+
     [Header("특산물 리스트 트렐로의 순서별로")]
     [Header("예) 1. 쌀, 2. 호두...")]
     [Tooltip("Prefabs/Specialty")]
@@ -106,7 +108,6 @@ public class GameManagement : MonoBehaviour
             if(nameSpe == SpecialtyList[i].name){
                 GameObject NextSpe = Instantiate(SpecialtyList[i], spawnPoint.position, Quaternion.identity);
                 NextSpe.GetComponent<Specialty>().isNextSummoned = false;
-                Debug.Log(SpecialtyList[i] + "FloorFalledSpawn");
                 break;
             }
         }
@@ -116,7 +117,6 @@ public class GameManagement : MonoBehaviour
         if(isStart && newSpawnTime > 0.5f){
             GameObject NextSpe = Instantiate(SpecialtyList[Random.Range(0, 4)], spawnPoint.position, Quaternion.identity);
             NextSpe.GetComponent<Specialty>().isNextSummoned = false;
-            Debug.Log(NextSpe + "NewSpawn");
             newSpawnTime = 0f;
         }
     }
