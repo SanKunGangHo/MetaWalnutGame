@@ -1,2 +1,2 @@
 # MetaWalnutGame
-SuikaGame for Cheonan
+SuikaGameVR for Cheonan-si in Korea
