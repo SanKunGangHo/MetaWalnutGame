@@ -69,6 +69,10 @@ PrefabInstance:
       value: FrogKoreanMelon
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 92270a9fa3f028242a3c7474fe0730e3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92270a9fa3f028242a3c7474fe0730e3, type: 3}
       propertyPath: m_TagString
       value: Specialty
       objectReference: {fileID: 0}
@@ -243,6 +247,7 @@ MonoBehaviour:
   hasInteracted: 0
   isAquarium: 0
   isWall: 0
+  isTriggered: 0
   isNextSummoned: 1
 --- !u!114 &8221882441645943460
 MonoBehaviour:

@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpecialtyName: Pumpkin
   SpecialtyPoint: 36
+  SpecialtyImage: {fileID: 0}
+  SpecialtyName_Korean: "\uBD81\uBA74 \uBC24\uD638\uBC15"
+  SpecialtyExplain: "\uCC9C\uC548\uC2DC \uBD81\uBA74\uC5D0\uC11C \uC7AC\uBC30\uB418\uB294
+    \uD638\uBC15.\n\uB2E8\uB9DB\uC774 \uAC15\uD574 \uAD7D\uAC70\uB098 \uCC0C\uBA74
+    \uBC24\uACE0\uAD6C\uB9C8 \uAC19\uC740 \uC2DD\uAC10\uC774 \uB09C\uB2E4.\n\uB2E8\uD638\uBC15
+    \uC0D0\uB7EC\uB4DC\uC5D0 \uC548\uC131\uB9DE\uCDA4."

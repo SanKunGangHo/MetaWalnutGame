@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3f8737a9be3e47343b4af6244666e20a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 14.312144
+      value: 12.709757
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f8737a9be3e47343b4af6244666e20a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 14.312144
+      value: 12.709757
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f8737a9be3e47343b4af6244666e20a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 14.312144
+      value: 12.709757
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f8737a9be3e47343b4af6244666e20a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f8737a9be3e47343b4af6244666e20a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0834
+      value: 0.084483
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f8737a9be3e47343b4af6244666e20a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -67,6 +67,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3f8737a9be3e47343b4af6244666e20a, type: 3}
       propertyPath: m_Name
       value: SusinMelon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3f8737a9be3e47343b4af6244666e20a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3f8737a9be3e47343b4af6244666e20a, type: 3}
       propertyPath: m_TagString
@@ -122,6 +126,7 @@ MonoBehaviour:
   hasInteracted: 0
   isAquarium: 0
   isWall: 0
+  isTriggered: 0
   isNextSummoned: 1
 --- !u!64 &7840382770904332191
 MeshCollider:

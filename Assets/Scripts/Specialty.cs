@@ -5,7 +5,7 @@ public class Specialty : MonoBehaviour
 {
     public SpecialtyData specialtyData;
     [SerializeField]private bool hasInteracted = false;
-    [SerializeField]private bool isAquarium = false;
+    [SerializeField]public bool isAquarium = false;
     [SerializeField]private bool isWall = false;
     public bool isTriggered;
 
@@ -44,8 +44,9 @@ public class Specialty : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Aquarium") && !isAquarium){//수조에 들어갔을 때
+            Debug.Log("Aquariumed");
             isTriggered = true;
-            Invoke("Aquarium", 1f);
+            isAquarium = true;
             gameObject.GetComponent<HandGrabInteractable>().enabled =false;
             gameObject.GetComponent<Rigidbody>().isKinematic = false;
             if(!isNextSummoned){
@@ -58,12 +59,9 @@ public class Specialty : MonoBehaviour
         }
 
         if(other.gameObject.CompareTag("Wall") && !isAquarium && !isNextSummoned){
+            Debug.Log("walled");
             GameManagement.Instance.FloorFalledSpawn(specialtyData.SpecialtyName);
             Destroy(gameObject);
         }
-    }
-
-    void Aquarium(){
-        isAquarium = true;
     }
 }

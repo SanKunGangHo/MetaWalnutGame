@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5020393802139534e8cfea22972cdea7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7.633143
+      value: 6.1488023
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5020393802139534e8cfea22972cdea7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.633143
+      value: 6.1488023
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5020393802139534e8cfea22972cdea7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7.633143
+      value: 6.1488023
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5020393802139534e8cfea22972cdea7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5020393802139534e8cfea22972cdea7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.19491386
+      value: 0.19655
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5020393802139534e8cfea22972cdea7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -67,6 +67,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5020393802139534e8cfea22972cdea7, type: 3}
       propertyPath: m_Name
       value: Apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5020393802139534e8cfea22972cdea7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5020393802139534e8cfea22972cdea7, type: 3}
       propertyPath: m_TagString
@@ -119,6 +123,7 @@ MonoBehaviour:
   hasInteracted: 0
   isAquarium: 0
   isWall: 0
+  isTriggered: 0
   isNextSummoned: 1
 --- !u!64 &2266374571063983392
 MeshCollider:

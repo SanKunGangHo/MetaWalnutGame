@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpecialtyName: Cucumber
   SpecialtyPoint: 10
+  SpecialtyImage: {fileID: 0}
+  SpecialtyName_Korean: "\uCC9C\uC548 \uC624\uC774"
+  SpecialtyExplain: "\uCC9C\uC548\uC2DC\uC5D0\uC11C \uC7AC\uBC30\uD558\uB294 \uC624\uC774.\n\uCC9C\uC548\uC2DC
+    \uBAA9\uCC9C\uC74D, \uBCD1\uCC9C\uBA74, \uB3D9\uBA74, \uC218\uC2E0\uBA74\uC744
+    \uC911\uC2EC\uC73C\uB85C \uC0DD\uC0B0\uB41C\uB2E4.\n\uB9DB\uACFC \uD488\uC9C8\uC740
+    2000\uB144\uB300 \uC774\uD6C4 10\uC5EC \uB144\uAC04 \uC804\uAD6D \uCD5C\uACE0\uB77C\uB294
+    \uD3C9\uAC00\uB97C \uBC1B\uC558\uB2E4."

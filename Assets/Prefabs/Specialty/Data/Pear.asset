@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpecialtyName: Pear
   SpecialtyPoint: 45
+  SpecialtyImage: {fileID: 0}
+  SpecialtyName_Korean: "\uCC9C\uC548 \uC2E0\uACE0\uBC30"
+  SpecialtyExplain: "\uCC9C\uC548\uC2DC\uC758 \uC131\uD658\uC74D\uACFC \uC9C1\uC0B0\uC74D\uC758
+    \uD2B9\uC0B0 \uACFC\uC2E4.\n\uC721\uC9C8\uC774 \uC5F0\uD558\uACE0 \uACFC\uC999\uC774
+    \uB9CE\uC740\uB370 \uB2F9\uB3C4\uB3C4 11.4BX\uB85C \uB9E4\uC6B0 \uB2EC\uB2E4."

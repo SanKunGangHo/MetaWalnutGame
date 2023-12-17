@@ -26,7 +26,10 @@ public class GameManagement : MonoBehaviour
     [Header("예) 1. 쌀, 2. 호두...")]
     [Tooltip("Prefabs/Specialty")]
     public List<GameObject> SpecialtyList = new List<GameObject>();
-
+    public GameObject SpecialtyInformationTexts;
+    public Text SpecialtyText_Name, SpecialtyText_Information;
+    public Sprite Specialty_Image;
+    public bool[] Specialty_bool;
 
     [Header("게임 관련")]
     [Tooltip("게임 시작 했는지")]
@@ -49,6 +52,8 @@ public class GameManagement : MonoBehaviour
         rankSystem = FindObjectOfType<RankSystem>();
         PointReset();
         totalPoints = 0;
+        SpecialtyInformationTexts.SetActive(false);
+        Specialty_bool = new bool[SpecialtyList.Count];
         //시작할 때 UI 초기화
     }
 
@@ -91,11 +96,18 @@ public class GameManagement : MonoBehaviour
     }
 
     public void NextSpecialtySpawn(Vector3 lerpVec, string nameSpe){
+        SpecialtyInformationTexts.SetActive(false);
         for(int i = 0; i < SpecialtyList.Count; i++){ //특산물 수만큼 반복
             Debug.Log(i);
             if(nameSpe == SpecialtyList[i].name){ //i번째 특산물 어레이와 지금 충돌한 오브젝트들의 이름이 같을 때
-                Instantiate(SpecialtyList[i+1], lerpVec, Quaternion.identity); //i+1번째(다음) 특산물을 충돌한 지점에 소환
+                GameObject NextSpe = Instantiate(SpecialtyList[i+1], lerpVec, Quaternion.identity); //i+1번째(다음) 특산물을 충돌한 지점에 소환
                 Debug.Log(SpecialtyList[i+1] + "NextSpecialSpawn");
+
+                if(!Specialty_bool[i]){
+                    InformationOutput(NextSpe.GetComponent<Specialty>());
+                    Specialty_bool[i] = true;
+                }
+
                 break;
             }else if(i == SpecialtyList.Count){//어레이 마지막에 도달했을 때, 아무 일도 일어나지 않음.
                 break;
@@ -104,6 +116,7 @@ public class GameManagement : MonoBehaviour
     }
 
     public void FloorFalledSpawn(string nameSpe){
+        SpecialtyInformationTexts.SetActive(false);
         for(int i = 0; i<SpecialtyList.Count; i++){
             if(nameSpe == SpecialtyList[i].name){
                 GameObject NextSpe = Instantiate(SpecialtyList[i], spawnPoint.position, Quaternion.identity);
@@ -114,10 +127,18 @@ public class GameManagement : MonoBehaviour
     }
 
     public void NewSpawn(){
+        SpecialtyInformationTexts.SetActive(false);
         if(isStart && newSpawnTime > 0.5f){
-            GameObject NextSpe = Instantiate(SpecialtyList[Random.Range(0, 4)], spawnPoint.position, Quaternion.identity);
+            int index = Random.Range(0,5);
+            GameObject NextSpe = Instantiate(SpecialtyList[index], spawnPoint.position, Quaternion.identity);
             NextSpe.GetComponent<Specialty>().isNextSummoned = false;
             newSpawnTime = 0f;
+            Debug.Log("NewSpawned"+SpecialtyList[index]);
+
+            if(!Specialty_bool[index]){//첫번째 소환
+                InformationOutput(NextSpe.GetComponent<Specialty>());
+                Specialty_bool[index] = true;
+            }
         }
     }
 
@@ -129,4 +150,12 @@ public class GameManagement : MonoBehaviour
         }
         rankSystem.RankUpdate(nowPlayerName, totalPoints);
     }
+
+    public void InformationOutput(Specialty specialty_Now){
+        SpecialtyInformationTexts.SetActive(true);
+        SpecialtyData data = specialty_Now.specialtyData;
+        SpecialtyText_Name.text = data.SpecialtyName_Korean;
+        SpecialtyText_Information.text = data.SpecialtyExplain;        
+    }
+
 }
