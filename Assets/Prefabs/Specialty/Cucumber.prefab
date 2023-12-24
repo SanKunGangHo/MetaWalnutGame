@@ -56,7 +56,6 @@ MonoBehaviour:
   hasInteracted: 0
   isAquarium: 0
   isWall: 0
-  isTriggered: 0
   isNextSummoned: 1
 --- !u!33 &1141927427112593882
 MeshFilter:

@@ -106,6 +106,9 @@ namespace Oculus.Interaction.HandGrab
         public IHandGrabInteractable TargetInteractable => Interactable;
         #endregion
 
+        public bool isGrabbed;
+        public GameObject NowHoldingObject;
+
         #region IHandGrabState
         public virtual bool IsGrabbing => HasSelectedInteractable
             && (Movement != null && Movement.Stopped);
@@ -262,6 +265,9 @@ namespace Oculus.Interaction.HandGrab
                 SetGrabStrength(1f);
             }
 
+            isGrabbed = true;
+            NowHoldingObject = interactable.gameObject;
+
             base.InteractableSelected(interactable);
         }
 
@@ -279,6 +285,9 @@ namespace Oculus.Interaction.HandGrab
                 VelocityCalculator.CalculateThrowVelocity(interactable.transform) :
                 new ReleaseVelocityInformation(Vector3.zero, Vector3.zero, Vector3.zero);
             interactable.ApplyVelocities(throwVelocity.LinearVelocity, throwVelocity.AngularVelocity);
+
+            isGrabbed = false;
+            NowHoldingObject = null;
         }
 
         protected override void HandlePointerEventRaised(PointerEvent evt)

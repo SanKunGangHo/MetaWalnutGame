@@ -4852,15 +4852,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5a4a579685b07f47b90f160601fa867, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5841
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5a4a579685b07f47b90f160601fa867, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.082701
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5a4a579685b07f47b90f160601fa867, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.88686
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5a4a579685b07f47b90f160601fa867, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4964,7 +4964,6 @@ MonoBehaviour:
   hasInteracted: 0
   isAquarium: 0
   isWall: 0
-  isTriggered: 0
   isNextSummoned: 1
 --- !u!54 &8312345440543474926
 Rigidbody:

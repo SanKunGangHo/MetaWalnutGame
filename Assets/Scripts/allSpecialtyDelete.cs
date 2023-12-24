@@ -16,7 +16,7 @@ public class allSpecialtyDelete : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Specialty")&&!collision.gameObject.GetComponent<Specialty>().isNextSummoned&&!collision.gameObject.GetComponent<Specialty>().isAquarium)
+        if (collision.gameObject.CompareTag("Specialty"))
         {
             if(!isAlreadySummon){
                 isAlreadySummon = true;

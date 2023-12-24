@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82b321bfa6c82c746a206ddcaa28ee08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.6420007
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82b321bfa6c82c746a206ddcaa28ee08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0834
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82b321bfa6c82c746a206ddcaa28ee08, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.26204
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82b321bfa6c82c746a206ddcaa28ee08, type: 3}
       propertyPath: m_LocalRotation.w
@@ -126,7 +126,6 @@ MonoBehaviour:
   hasInteracted: 0
   isAquarium: 0
   isWall: 0
-  isTriggered: 0
   isNextSummoned: 1
 --- !u!64 &5939110081088216937
 MeshCollider:

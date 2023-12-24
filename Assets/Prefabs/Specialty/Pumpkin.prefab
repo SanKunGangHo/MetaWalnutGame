@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f4bb0f1ad0cd674a8285c3cb651f934, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.642
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f4bb0f1ad0cd674a8285c3cb651f934, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.083427
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f4bb0f1ad0cd674a8285c3cb651f934, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.33972
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f4bb0f1ad0cd674a8285c3cb651f934, type: 3}
       propertyPath: m_LocalRotation.w
@@ -250,7 +250,6 @@ MonoBehaviour:
   hasInteracted: 0
   isAquarium: 0
   isWall: 0
-  isTriggered: 0
   isNextSummoned: 1
 --- !u!114 &4395691078308328283
 MonoBehaviour:

@@ -53,6 +53,11 @@ namespace Oculus.Interaction
         private GrabInteractable _selectedInteractableOverride;
         private bool _isSelectionOverriden = false;
 
+        public bool isGrabbed;
+
+        public GameObject NowHoldingObject;
+
+
         protected override void Awake()
         {
             base.Awake();
@@ -174,6 +179,9 @@ namespace Oculus.Interaction
             base.InteractableSelected(interactable);
 
             _tween.MoveTo(target);
+
+            isGrabbed = true;
+            NowHoldingObject = interactable.gameObject;
         }
 
         protected override void InteractableUnselected(GrabInteractable interactable)
@@ -184,6 +192,9 @@ namespace Oculus.Interaction
                 VelocityCalculator.CalculateThrowVelocity(interactable.transform) :
                 new ReleaseVelocityInformation(Vector3.zero, Vector3.zero, Vector3.zero);
             interactable.ApplyVelocities(throwVelocity.LinearVelocity, throwVelocity.AngularVelocity);
+
+            isGrabbed = false;
+            NowHoldingObject = null;
         }
 
         protected override void HandlePointerEventRaised(PointerEvent evt)

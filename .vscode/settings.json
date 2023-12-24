@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "MetaWalnutGame.sln"
+    "dotnet.defaultSolution": "MetaWalnutGame.sln",
+    "dotnet.preferCSharpExtension": true
 }
